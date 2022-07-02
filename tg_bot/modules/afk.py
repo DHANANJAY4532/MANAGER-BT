@@ -86,9 +86,10 @@ def __gdpr__(user_id):
 
 
 __help__ = """
- - /afk <reason>: mark yourself as AFK(away from keyboard).
- - brb <reason>: same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+ - /afk <reason>: mark yourself as AFK(away from keyboard).\n
+ - brb <reason>: same as the afk command - but not a command.\n
+When marked as AFK, any mentions will be replied to with a message to say you're not available!\n
+Developed by: [ITS ME ʝυριтєя](https://t.me/its_me_jupiter) 
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
@@ -101,7 +102,7 @@ dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
-__mod_name__ = "AFK"
+__mod_name__ = "😴AFK"
 __command_list__ = ["afk"]
 __handlers__ = [(AFK_HANDLER, AFK_GROUP), (AFK_REGEX_HANDLER, AFK_GROUP), (NO_AFK_HANDLER, AFK_GROUP),
                 (AFK_REPLY_HANDLER, AFK_REPLY_GROUP)]
