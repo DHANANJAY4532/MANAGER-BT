@@ -7,6 +7,7 @@ from tg_bot import dispatcher
 from tg_bot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler, DisableAbleMessageHandler
 from tg_bot.modules.sql import afk_sql as sql
 from tg_bot.modules.users import get_user_id
+from tg_bot.modules.helper_funcs.chat_status import bot_admin, user_admin
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
