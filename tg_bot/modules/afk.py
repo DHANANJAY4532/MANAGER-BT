@@ -13,6 +13,8 @@ AFK_REPLY_GROUP = 8
 
 
 @run_async
+@bot_admin
+@user_admin
 def afk(bot: Bot, update: Update):
     args = update.effective_message.text.split(None, 1)
     reason = args[1] if len(args) >= 2 else ""
@@ -21,6 +23,8 @@ def afk(bot: Bot, update: Update):
 
 
 @run_async
+@bot_admin
+@user_admin
 def no_longer_afk(bot: Bot, update: Update):
     user = update.effective_user
 
@@ -44,6 +48,8 @@ def no_longer_afk(bot: Bot, update: Update):
 
 
 @run_async
+@bot_admin
+@user_admin
 def reply_afk(bot: Bot, update: Update):
     message = update.effective_message
     entities = message.parse_entities([MessageEntity.TEXT_MENTION, MessageEntity.MENTION])
